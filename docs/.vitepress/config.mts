@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/pegd-docs/',
   title: "pegd-docs",
   description: "Documentacion oficial de la plataforma de estandarizacion y gestion documental CFE (PEGD-CFE)",
   themeConfig: {

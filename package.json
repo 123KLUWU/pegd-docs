@@ -9,7 +9,7 @@
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "predeploy": "npm run docs:build",
-    "deploy": "gh-pages -d docs/.vitepress/dist"
+    "deploy": "gh-pages -d docs/.vitepress/dist -r https://github.com/123KLUWU/pegd-docs.git -b gh-pages"
   },
   "keywords": [],
   "author": "",
