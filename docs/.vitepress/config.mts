@@ -25,6 +25,10 @@ export default defineConfig({
           { text: 'Creando tu Cuenta y Primer Inicio de Sesión', link: '/manual-de-usuario/01-registro-e-inicio-de-sesion' },
           { text: 'Explorando el panel', link: '/manual-de-usuario/02-explorando-el-panel' },
           { text: 'Como generar Hojas de calibracion', link: '/manual-de-usuario/03-generar-documentos'},
+          { text: 'Cómo Consultar Diagramas y Generar Códigos QR', link: '/manual-de-usuario/04-consultar-Diagramas-y-generar-codigos-qr'},
+          { text: 'Cómo Administrar y Compartir tus Documentos Generados', link: '/manual-de-usuario/05-menu-hojas-por-usuario'},
+          { text: 'Final', link: '/manual-de-usuario/06-despedida'},
+
         ]
       }
     ],
