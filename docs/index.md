@@ -3,23 +3,22 @@
 layout: home
 
 hero:
-  name: "pegd-docs"
-  text: "Documentacion oficial de la plataforma de estandarizacion y gestion documental CFE (PEGD-CFE)"
-  tagline: My great project tagline
+  name: "Documentación de PEGD-CFE"
+  text: "La guía completa para la Plataforma de Estandarización y Gestión Documental."
+  tagline: "Todo lo que necesitas para usar y administrar la plataforma."
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Empezar
+      link: /manual-de-usuario/00-introduccion
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: Contribuir
+      link: /markdown-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Manual de Usuario
+    details: Aprende a utilizar todas las funcionalidades de la plataforma, desde la creación de tu cuenta hasta la generación de documentos.
+  - title: Guía para Administradores
+    details: Descubre cómo gestionar usuarios, configurar plantillas y administrar el sistema de forma eficiente.
+  - title: Documentación para Desarrolladores
+    details: Explora la arquitectura, las API y las guías de contribución para extender y personalizar la plataforma.
 ---
-
