@@ -1,0 +1,44 @@
+# Nombre del workflow
+name: Deploy VitePress Manual to VPS
+
+# Disparador: Se ejecuta en cada push a la rama 'main'
+on:
+  push:
+    branches:
+      - main
+
+# Tareas a ejecutar
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # Usará una máquina virtual de Ubuntu
+
+    steps:
+      # 1. Clona el repositorio a la máquina virtual
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Configura Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18' # O la versión que uses
+          cache: 'npm'
+
+      # 3. Instala las dependencias
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Construye el sitio estático
+      - name: Build VitePress site
+        run: npm run docs:build
+
+      # 5. Copia los archivos al VPS usando SSH
+      - name: Deploy to VPS
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ".vitepress/dist/*" # La carpeta que se va a copiar
+          target: ${{ secrets.TARGET_DIR }}
+          strip_components: 2 # Importante para no copiar las carpetas padre
