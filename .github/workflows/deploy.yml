@@ -32,6 +32,10 @@ jobs:
       - name: Build VitePress site
         run: npm run docs:build
 
+      # --- AÑADE ESTE BLOQUE DE DEPURACIÓN AQUÍ ---
+      - name: List build files to debug
+        run: ls -R
+
       # 5. Copia los archivos al VPS usando SSH
       - name: Deploy to VPS
         uses: appleboy/scp-action@master
@@ -39,6 +43,6 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ".vitepress/dist/*" # La carpeta que se va a copiar
+          source: ".vitepress/dist/*" # <-- Probablemente tengas que cambiar esta línea
           target: ${{ secrets.TARGET_DIR }}
-          strip_components: 2 # Importante para no copiar las carpetas padre
+          strip_components: 2
