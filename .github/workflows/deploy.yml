@@ -43,6 +43,6 @@ jobs:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ".vitepress/dist/*" # <-- Probablemente tengas que cambiar esta línea
+          source: "docs/.vitepress/dist/*" # <-- Probablemente tengas que cambiar esta línea
           target: ${{ secrets.TARGET_DIR }}
-          strip_components: 2
+          strip_components: 3
